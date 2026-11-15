@@ -1,0 +1,363 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us - Cappuccino Coffee Day Shop</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #1b100b, #3b2418, #170e09);
+            font-family: Georgia, serif;
+            color: #e9d5bd;
+        }
+        .main {
+            max-width: 1250px;
+            margin: auto;
+            padding: 25px;
+            border: 8px solid #c4a080;
+            border-radius: 30px;
+            background-image:
+                linear-gradient(
+                    rgba(15, 10, 7, 0.78),
+                    rgba(20, 12, 8, 0.82)
+                ),
+                url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1600&q=85");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            box-shadow: 0 0 30px rgba(0,0,0,0.7);
+        }
+        header {
+            text-align: center;
+            font-size: 28px;
+            color: #f3e6d5;
+            padding: 10px;
+            text-shadow: 2px 2px 5px #000;
+        }
+        h2 {
+            color:white;
+        }
+        .contact {
+            padding: 15px 35px;
+        }
+        .contact h2 {
+            font-size: 35px;
+        }
+        .contact h3 {
+            font-size: 27px;
+            margin-top: 55px;
+            color:white;
+        }
+        .details {
+            margin-top: 60px;
+            line-height: 2;
+            font-size: 19px;
+        }
+        .details a {
+            color: #e9c6a5;
+        }
+        .details a:hover {
+            color: white;
+        }
+        .form-container {
+            width: 430px;
+            max-width: 100%;
+            margin: 45px auto;
+            padding: 25px 35px;
+            border: 5px solid #a95d32;
+            border-radius: 10px;
+            background: rgba(20, 10, 5, 0.75);
+            box-shadow: 0 0 18px rgba(180,100,50,0.4);
+        }
+        .form-container h2 {
+            text-align: center;
+            color: #f3e6d5;
+            text-decoration: underline;
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            margin: 18px 0 10px;
+            font-size: 18px;
+            text-decoration: underline;
+            color: #f1ddc7;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d2b49a;
+            border-radius: 5px;
+            background: #f5eee7;
+            color: #222;
+            font-size: 15px;
+            outline: none;
+        }
+        input:focus, textarea:focus {
+            border: 2px solid #b66a3c;
+            box-shadow: 0 0 7px #b66a3c;
+        }
+        textarea {
+            height: 110px;
+            resize: vertical;
+        }
+        button {
+            display: block;
+            margin: 25px auto 5px;
+            padding: 12px 35px;
+            background: #a95d32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #d18a5c;
+            transform: scale(1.05);
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 60px 10px;
+            text-align: center;
+        }
+        .feature {
+            width: 280px;
+            padding: 15px;
+        }
+        .feature .symbol {
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+        .feature h2 {
+            text-decoration: underline;
+            color: #f1d5b6;
+        }
+        .feature p {
+            line-height: 1.7;
+            color: #f0dfce;
+        }
+        footer {
+            background: #eee5dc;
+            color: #4b382c;
+            padding: 35px 15px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 25px;
+            border-radius: 5px;
+        }
+        .footer-section {
+            min-width: 180px;
+            text-align: center;
+        }
+        .footer-section h2 {
+            color: #72513c;
+            font-weight: normal;
+        }
+        .footer-section a {
+            display: block;
+            color: #4b382c;
+            text-decoration: none;
+            line-height: 2;
+        }
+        .footer-section a:hover {
+            color: #b66a3c;
+            text-decoration: underline;
+        }
+        .thankyou {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .thankyou h1 {
+            font-size: 38px;
+            text-decoration: underline;
+            color: #f3e3d2;
+        }
+        .coffee-img {
+            font-size: 150px;
+            filter: drop-shadow(5px 8px 8px #000);
+        }
+        .copyright {
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid #c4a080;
+            color: #e9d5bd;
+        }
+        @media(max-width:600px) {
+            body {
+                padding: 8px;
+            }
+            .main {
+                padding: 12px;
+                border-width: 5px;
+                background-attachment: scroll;
+            }
+            header {
+                font-size: 19px;
+            }
+            .contact {
+                padding: 10px;
+            }
+            .contact h2 {
+                font-size: 28px;
+            }
+            .contact h3 {
+                font-size: 21px;
+            }
+            .details {
+                font-size: 15px;
+                overflow-wrap: anywhere;
+            }
+            .form-container {
+                padding: 20px;
+            }
+            .thankyou h1 {
+                font-size: 28px;
+            }
+            .coffee-img {
+                font-size: 110px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <header>
+        <h1>Cappuccino Coffee Day Shop</h1>
+    </header>
+    <section class="contact">
+        <h2>Contact Us</h2>
+        <h3>
+            Questions, Comments? We are ready to listen.
+        </h3>
+        <div class="details">
+            <p>
+                📧 Email:
+                <a href="mailto:sweety1234@gmail.com">
+                    sweety1234@gmail.com
+                </a>
+            </p>
+            <p>
+                🔗
+                <a href="https://en.wikipedia.org/wiki/Cappuccino"
+                   target="_blank">
+                    https://en.wikipedia.org/wiki/Cappuccino
+                </a>
+            </p>
+        </div>
+    </section>
+    <div class="form-container">
+        <h2>FEEDBACK FORM</h2>
+        <form action="https://formsubmit.co/sweety1234@gmail.com"
+              method="POST">
+            <input type="hidden"
+                   name="_subject"
+                   value="New Coffee Shop Feedback">
+            <input type="hidden"
+                   name="_template"
+                   value="table">
+            <input type="hidden"
+                   name="_captcha"
+                   value="false">
+            <input type="text"
+                   name="_honey"
+                   style="display:none">
+            <label for="name">Name:</label>
+            <input type="text"
+                   id="name"
+                   name="Name"
+                   placeholder="Enter your name"
+                   required>
+            <label for="email">Email:</label>
+            <input type="email"
+                   id="email"
+                   name="Email"
+                   placeholder="ex: sweety123@gmail.com"
+                   required>
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback"
+                      name="Feedback"
+                      placeholder="Write your feedback here..."
+                      required></textarea>
+            <button type="submit"><a href="file:///C:/Users/adipu/Desktop/fff.html">Submit</a></button>
+
+        </form>
+    </div>
+    <section class="features">
+        <div class="feature">
+            <div class="symbol">🌍</div>
+            <h2>A World Wide Impact</h2>
+            <p>
+                Starts to make the most of your favourite
+                coffee and have a great and good day
+                in your life with our coffee.
+            </p>
+        </div>
+        <div class="feature">
+            <div class="symbol">⊕</div>
+            <h2>Best Quality</h2>
+            <p>
+                Absolute uniqueness guaranteed!
+                Quality before everything else!
+            </p>
+        </div>
+        <div class="feature">
+            <div class="symbol">🏷️</div>
+            <h2>Best Offers</h2>
+            <p>
+                We provide best offers in our coffee shop.
+            </p>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-section">
+            <h2>QUICKLINKS</h2>
+<a href="file:///C:/Users/adipu/Desktop/home.html">Home</a>
+<a href="file:///C:/Users/adipu/Desktop/About.html">About</a>
+<a href="file:///C:/Users/adipu/Desktop/meen.html">Menu</a>
+<a href="file:///C:/Users/adipu/Desktop/contactt.html">Contact</a>
+        </div>
+        <div class="footer-section">
+            <h2>GET THIS SITE ON</h2>
+            <a href="#">Privacy Policy</a>
+            <a href="about.html">About Us</a>
+            <a href="#">Terms of Services</a>
+            <a href="#">E-commerce</a>
+        </div>
+        <div class="footer-section">
+            <h2>FOLLOW US</h2>
+            <a href="https://www.facebook.com/">Facebook</a>
+            <a href="https://www.instagram.com/">Instagram</a>
+            <a href="https://www.youtube.com/">YouTube</a>
+        </div>
+    </footer>
+    <section class="thankyou">
+        <div>
+            <h1>THANK YOU</h1>
+            <h1>VISIT AGAIN</h1>
+        </div>
+        <div class="coffee-img">
+            ☕
+        </div>
+    </section>
+    <div class="copyright">
+        © 2026 Cappuccino Coffee Day Shop.
+        All Rights Reserved.
+    </div>
+</div>
+</body>
+</html>
